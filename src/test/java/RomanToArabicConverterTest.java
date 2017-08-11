@@ -32,7 +32,7 @@ public class RomanToArabicConverterTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void checkForUnexpectedCharacters() {
-        String unexpectedInput = "IXI";
+        String unexpectedInput = "VCC";
         RomanToArabicConverter converter = new RomanToArabicConverter();
         converter.convert(unexpectedInput);
     }
