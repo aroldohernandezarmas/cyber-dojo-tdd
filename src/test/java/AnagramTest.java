@@ -37,19 +37,20 @@ public class AnagramTest {
         }
     }
 
-    @Test
-    public void checkThatNoAnagramExistsForAnEmptyOrNullString() {
-        String base1 = "";
-
+    @Test(expected = IllegalArgumentException.class)
+    public void checkThatNoAnagramExistsForAnEmpty() {
         // Anagrams generator
         AnagramGenerator generator = new AnagramGenerator();
-
         //Anagram generation
-        HashSet<String> anagrams = generator.generate(base1);
-        assertNull(anagrams);
+        generator.generate("");
+    }
 
-        anagrams = generator.generate(null);
-        assertNull(anagrams);
+    @Test(expected = IllegalArgumentException.class)
+    public void checkThatNoAnagramExistsForANullString() {
+        // Anagrams generator
+        AnagramGenerator generator = new AnagramGenerator();
+        //Anagram generation
+        generator.generate(null);
     }
 
     private int amountOfAnagramsForAGivenLength(String base) {

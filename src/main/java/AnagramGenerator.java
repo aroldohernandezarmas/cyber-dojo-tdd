@@ -6,8 +6,9 @@ class AnagramGenerator {
     private String base;
     private HashSet<String> result = new HashSet<>();
 
-    HashSet<String> generate(String base) {
-        if (base == null || base.length() == 0) return null;
+    HashSet<String> generate(String base) throws IllegalArgumentException {
+        if (base == null || base.length() == 0)
+            throw new IllegalArgumentException("The input shouldn't be null or an empty string.");
         else {
             this.base = base;
             this.mark = new boolean[base.length()];
