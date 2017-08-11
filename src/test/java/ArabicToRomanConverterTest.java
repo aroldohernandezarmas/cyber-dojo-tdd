@@ -30,4 +30,18 @@ public class ArabicToRomanConverterTest {
         }
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void checkResultsForIntegersTooBig() {
+        ArabicToRomanConverter converter = new ArabicToRomanConverter();
+        int tooBig = 7000;
+        converter.convert(tooBig);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void checkResultsForIntegersTooSmall() {
+        ArabicToRomanConverter converter = new ArabicToRomanConverter();
+        int tooBig = 0;
+        converter.convert(tooBig);
+    }
+
 }
