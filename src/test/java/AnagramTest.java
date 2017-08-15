@@ -9,7 +9,7 @@ public class AnagramTest {
     @Test
     public void checkAnagramsForANonEmptyString() {
         // Test case
-        String base = "asdfghjku"; // aann, anan, anna, naan, nana, nnaa
+        String base = "banana"; // aann, anan, anna, naan, nana, nnaa
 
         // Anagrams generator
         AnagramGenerator generator = new AnagramGenerator();
