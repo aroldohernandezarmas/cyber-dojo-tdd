@@ -18,7 +18,7 @@ public class AnagramTest {
         HashSet<String> anagrams = generator.generate(base);
 
         // Calculating the amount of anagrams from a given a string as function of the amount of characters n!
-        int amountOfAnagrams = amountOfAnagramsForAGivenLength(base); // TODO not proper way!!!
+        int amountOfAnagrams = amountOfAnagramsForAGivenLength(base);
 
         // Asserting that the amount of anagrams generated is actually
         // equal to the expected amount determined by combinatorial deduction
